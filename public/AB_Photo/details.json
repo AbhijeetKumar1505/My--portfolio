@@ -1,0 +1,44 @@
+{
+  "Name": "Abhijeet Kumar",
+  "Email": "ab7120977@gmail.com",
+  "Phone": "+91 9939584630",
+  "LinkedIn": "https://www.linkedin.com/in/abhijeet-kumar-7bb605311/",
+  "GitHub": "https://github.com/AbhijeetKumar1505",
+  "Other Links": "https://instagram.com/abhijeet_1505",
+  "Bio/Details": "Hi, I'm Abhijeet Kumar — a passionate Data Science undergraduate at IIT Madras, specializing in backend development, automation, and data-driven product strategy. With hands-on experience in Python, SQL, Django, and modern data tools, I build robust, scalable solutions that prioritize performance and user experience. As the Co-Founder & Marketing Strategist at NexusTycoon.com, I've driven business growth through data analytics, process automation, and targeted marketing strategies. I also serve as Secretary of Rampage Esports Club, where I manage operations, events, and partnerships. Beyond technical skills, I'm deeply committed to community-building and mentorship, having worked with dynamic teams and online communities to foster collaboration and personal development. My work is grounded in clear communication, leadership, and a continuous learning mindset.",
+  "Skills": [
+    "Programming Languages: Python, Java, SQL, HTML, CSS, JavaScript",
+    "Frameworks: Django, React, Node.js, Express, Flask",
+    "Tools: Git, Docker, AWS, Linux, VS Code, PyCharm, IntelliJ IDEA",
+    "Database: MySQL, PostgreSQL, MongoDB",
+    "Cloud: AWS, GCP, Azure",
+    "Data Science: Pandas, NumPy, Scikit-learn, TensorFlow, Keras, PyTorch",
+    "Data Visualization: Matplotlib, Seaborn, Plotly, Tableau",
+    "Machine Learning: Linear Regression, Logistic Regression, Decision Trees, Random Forest, Gradient Boosting, K-Nearest Neighbors, Support Vector Machines, Neural Networks",
+    "Deep Learning: Convolutional Neural Networks, Recurrent Neural Networks, Long Short-Term Memory, Generative Adversarial Networks",
+    "Data Engineering: Apache Airflow, Apache Spark, Apache Hadoop, Apache Kafka"
+  ],
+  "Education": [
+    "BS in Data Science and Applications, IIT Madras, 2024-2028",
+    "High School, Guru Gobind Singh Public School, Bokaro Steel City-Jharkhand, 2022-2024",
+    "Secondary School, Saint Joseph's School, Banka-Bihar, 2021-2022"
+  ],
+  "Achievements & Certifications": [
+    "Docker & Kubernetes Workshop – Scaler Academy",
+    "Olympiads: 2016: School Topper",
+    "Olympiads: 2017: 3rd Rank (School Level)",
+    "Olympiads: 2018: School Topper"
+  ],
+  "Experience": [
+    "Rampage Esports Club (October 2024 – May 2025): Secretary - Directed club operations, organized tournaments, and handled sponsor relations. Improved participation rates and streamlined communications.",
+    "Nexus Tycoon (May 2024 – October 2024): Co-Founder & Marketing Strategist - Led growth through data analytics and automation. Developed marketing strategies and boosted user engagement. Managed branding, content, and operational pipelines.",
+    "Ments (2024 - Present): Community Manager, Business Analyst, Developer - Managed an active online learning community. Mentored members on growth and upskilling. Developed a FullStack website to improve user experience."
+  ],
+  "Projects": [
+    "Data Analysis Tool (Jan 2025): Python-based statistical analysis and visualization tool. Tech Stack: Python, Pandas, Matplotlib, Streamlit, NumPy. Project Link: https://github.com/AbhijeetKumar1505/Dexter",
+    "Data Cleaning Tool (Mar 2025): UI-based tool for data standardization and preprocessing. Tech Stack: Python, Streamlit, NumPy, CSV Handling. Project Link: https://github.com/AbhijeetKumar1505/DCT",
+    "Stock Price Predictor (Mar 2025): Predicting stock prices using machine learning. Tech Stack: Python, Streamlit, NumPy, CSV, Machine Learning. Project Link: https://github.com/AbhijeetKumar1505/Stock-Sentiment-Price-Predictor",
+    "EcoFinds – Empowering Sustainable Consumption through a Second-Hand Marketplace (Mar 2025): A second-hand marketplace for sustainable consumption. Tech Stack: Python, Django, HTML, CSS, Jinja2, Bootstrap, SQLite. Project Link: https://github.com/AbhijeetKumar1505/EcoFinds"
+  ],
+  "Address": "Ashramnagar, Banka, Bihar - 813102"
+}
