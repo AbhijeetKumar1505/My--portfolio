@@ -28,9 +28,6 @@ export default function Work() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <div style={{ textAlign: 'center', fontSize: '1.5rem', margin: '2rem 0' }}>
-        Coming Soon
-      </div>
       <Projects />
     </Column>
   );

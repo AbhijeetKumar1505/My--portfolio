@@ -14,5 +14,14 @@ export async function generateMetadata() {
 }
 
 export default function Blog() {
-  return <div style={{textAlign: 'center', marginTop: '4rem', fontSize: '2rem'}}>Blog – Coming soon</div>;
+  return (
+    <Column as="section" gap="40" fillWidth>
+      <Heading as="h1" variant="display-strong-s" marginBottom="24">
+        {blog.title}
+      </Heading>
+      <Posts columns="2" thumbnail direction="row" />
+      {/* Optionally, add newsletter or Mailchimp signup below */}
+      {/* <Mailchimp /> */}
+    </Column>
+  );
 }

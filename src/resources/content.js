@@ -16,7 +16,7 @@ const person = {
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Subscribe to {person.firstName}&apos;s Newsletter</>,
   description: (
     <>
       I occasionally write about design, technology, and share thoughts on the intersection of
@@ -52,9 +52,9 @@ const home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
+  title: `${person.name}&apos;s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Hi, I'm Abhijeet Kumar.</>,
+  headline: "Hi, I'm Abhijeet Kumar.",
   featured: {
     display: true,
     title: <>Recent project: <strong className="ml-4">EcoFinds – Empowering Sustainable Consumption</strong></>,
@@ -90,7 +90,7 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Hi, I'm Abhijeet Kumar — a passionate Data Science undergraduate at IIT Madras, specializing in backend development, automation, and data-driven product strategy. With hands-on experience in Python, SQL, Django, and modern data tools, I build robust, scalable solutions that prioritize performance and user experience. As the Co-Founder & Marketing Strategist at NexusTycoon.com, I've driven business growth through data analytics, process automation, and targeted marketing strategies. I also serve as Secretary of Rampage Esports Club, where I manage operations, events, and partnerships. Beyond technical skills, I'm deeply committed to community-building and mentorship, having worked with dynamic teams and online communities to foster collaboration and personal development. My work is grounded in clear communication, leadership, and a continuous learning mindset.
+        Hi, I&apos;m Abhijeet Kumar — a passionate Data Science undergraduate at IIT Madras, specializing in backend development, automation, and data-driven product strategy. With hands-on experience in Python, SQL, Django, and modern data tools, I build robust, scalable solutions that prioritize performance and user experience. As the Co-Founder & Marketing Strategist at NexusTycoon.com, I&apos;ve driven business growth through data analytics, process automation, and targeted marketing strategies. I also serve as Secretary of Rampage Esports Club, where I manage operations, events, and partnerships. Beyond technical skills, I&apos;m deeply committed to community-building and mentorship, having worked with dynamic teams and online communities to foster collaboration and personal development. My work is grounded in clear communication, leadership, and a continuous learning mindset.
       </>
     ),
   },
