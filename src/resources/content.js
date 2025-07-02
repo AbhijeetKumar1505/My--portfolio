@@ -229,7 +229,48 @@ const gallery = {
   label: "Gallery",
   title: "Gallery – Coming soon",
   description: "Gallery content coming soon.",
-  images: []
+  images: [
+    {
+      src: "/images/gallery/horizontal-1.jpg",
+      alt: "Horizontal image 1",
+      orientation: "horizontal"
+    },
+    {
+      src: "/images/gallery/horizontal-2.jpg",
+      alt: "Horizontal image 2",
+      orientation: "horizontal"
+    },
+    {
+      src: "/images/gallery/horizontal-3.jpg",
+      alt: "Horizontal image 3",
+      orientation: "horizontal"
+    },
+    {
+      src: "/images/gallery/horizontal-4.jpg",
+      alt: "Horizontal image 4",
+      orientation: "horizontal"
+    },
+    {
+      src: "/images/gallery/vertical-1.jpg",
+      alt: "Vertical image 1",
+      orientation: "vertical"
+    },
+    {
+      src: "/images/gallery/vertical-2.jpg",
+      alt: "Vertical image 2",
+      orientation: "vertical"
+    },
+    {
+      src: "/images/gallery/vertical-3.jpg",
+      alt: "Vertical image 3",
+      orientation: "vertical"
+    },
+    {
+      src: "/images/gallery/vertical-4.jpg",
+      alt: "Vertical image 4",
+      orientation: "vertical"
+    }
+  ]
 };
 
 export { person, social, newsletter, home, about, blog, work, gallery };
