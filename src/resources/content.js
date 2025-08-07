@@ -1,5 +1,3 @@
-import { Logo } from "@once-ui-system/core";
-
 const person = {
   firstName: "Abhijeet",
   lastName: "Kumar",
@@ -98,6 +96,17 @@ const about = {
     display: true,
     title: "Work Experience",
     experiences: [
+      {
+        company: "Deloitte Australia",
+        timeframe: "August 2025",
+        role: "Data Analytics Job Simulation Participant",
+        achievements: [
+          <>Completed a Deloitte job simulation involving data analysis and forensic technology.</>,
+          <>Created a data dashboard using Tableau for data visualization and insights.</>,
+          <>Used Excel to classify data and draw meaningful business conclusions.</>,
+        ],
+        images: [],
+      },
       {
         company: "Rampage Esports Club",
         timeframe: "October 2024 – May 2025",
