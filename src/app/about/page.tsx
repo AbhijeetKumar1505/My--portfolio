@@ -196,7 +196,7 @@ export default async function About() {
             )}
             <div className={styles.resumeButton}>
               <Button
-                href="/AB_Photo/Abhijeet_Kumar_Resume.pdf"
+                href="/AB_Photo/Abhijeet Kumar_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="primary"
