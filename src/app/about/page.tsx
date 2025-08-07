@@ -194,6 +194,19 @@ export default async function About() {
                 )}
               </Flex>
             )}
+            <div className={styles.resumeButton}>
+              <Button
+                href="/AB_Photo/Abhijeet Kumar_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="primary"
+                size="m"
+                prefixIcon="download"
+                width="100%"
+              >
+                Download Resume
+              </Button>
+            </div>
           </Column>
 
           {about.intro.display && (

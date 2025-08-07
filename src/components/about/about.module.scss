@@ -26,4 +26,15 @@
     .blockAlign {
         align-self: center;
     }
+
+    .resumeButton {
+        margin-top: var(--static-space-16);
+        width: 100%;
+        text-align: center;
+
+        button, a {
+            width: 100%;
+            justify-content: center;
+        }
+    }
 }

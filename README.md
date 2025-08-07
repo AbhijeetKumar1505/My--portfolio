@@ -1,94 +1,88 @@
-# **Magic Portfolio by Once UI**
+# **Abhijeet Kumar's Portfolio**
 
-View the [demo here](https://demo.magic-portfolio.com).
+[![Portfolio](https://img.shields.io/badge/View-Portfolio-blue?style=for-the-badge)](https://your-portfolio-url.com)
+[![LinkedIn](https://img.shields.io/badge/Connect-LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/abhijeet-kumar-7bb605311/)
+[![GitHub](https://img.shields.io/badge/View-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/AbhijeetKumar1505)
 
-![Magic Portfolio](https://demo.magic-portfolio.com/images/og/home.jpg)
+![Portfolio Preview](/public/images/og/home.jpg)
 
+## **👋 About Me**
 
-# **Getting started**
+I'm Abhijeet Kumar, a passionate Data Science undergraduate at IIT Madras, specializing in backend development, automation, and data-driven product strategy. With hands-on experience in Python, SQL, Django, and modern data tools, I build robust, scalable solutions that prioritize performance and user experience.
 
-Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
+## **🚀 Skills**
 
-**1. Clone the repository**
-```
-git clone https://github.com/once-ui-system/magic-portfolio.git
-```
+- **Programming Languages**: Python, Java, SQL, JavaScript, HTML/CSS
+- **Frameworks**: Django, React, Node.js, Express, Flask
+- **Data Science**: Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch
+- **Data Visualization**: Matplotlib, Seaborn, Plotly, Tableau
+- **Tools**: Git, Docker, AWS, Linux, VS Code
+- **Cloud**: AWS, GCP, Azure
 
-**2. Install dependencies**
-```
-npm install
-```
+## **💼 Experience**
 
-**3. Run dev server**
-```
-npm run dev
-```
+### **Deloitte Australia**
+**Data Analytics Job Simulation Participant**  
+*August 2025*  
+- Completed a Deloitte job simulation involving data analysis and forensic technology
+- Created a data dashboard using Tableau for data visualization and insights
+- Used Excel to classify data and draw meaningful business conclusions
 
-**4. Edit config**
-```
-src/app/resources/config
-```
+### **Rampage Esports Club**
+**Secretary**  
+*October 2024 – May 2025*  
+- Directed club operations, organized tournaments, and handled sponsor relations
+- Improved participation rates and streamlined communications
 
-**5. Edit content**
-```
-src/app/resources/content
-```
+### **Nexus Tycoon**
+**Co-Founder & Marketing Strategist**  
+*May 2024 – October 2024*  
+- Led growth through data analytics and automation
+- Developed marketing strategies and boosted user engagement
+- Managed branding, content, and operational pipelines
 
-**6. Create blog posts / projects**
-```
-Add a new .mdx file to src/app/blog/posts or src/app/work/projects
-```
+## **🎓 Education**
 
-# **Documentation**
+### **BS in Data Science and Applications**
+*Indian Institute of Technology (IIT) Madras*  
+*2024 - 2028*  
 
-Docs available at: [docs.once-ui.com](https://docs.once-ui.com/docs/magic-portfolio/quick-start)
+## **📂 Projects**
 
-# **Features**
+### **EcoFinds**
+A second-hand marketplace for sustainable consumption  
+*Tech Stack: Python, Django, HTML, CSS, Jinja2, Bootstrap, SQLite*  
+[View on GitHub](https://github.com/AbhijeetKumar1505/EcoFinds)
 
-## **Once UI**
-- All tokens, components & features of [Once UI](https://once-ui.com)
+### **Stock Price Predictor**
+Predicting stock prices using machine learning  
+*Tech Stack: Python, Streamlit, NumPy, CSV, Machine Learning*  
+[View on GitHub](https://github.com/AbhijeetKumar1505/Stock-Sentiment-Price-Predictor)
 
-## **SEO**
-- Automatic open-graph and X image generation with next/og
-- Automatic schema and metadata generation based on the content file
+### **Data Analysis Tool**
+Python-based statistical analysis and visualization tool  
+*Tech Stack: Python, Pandas, Matplotlib, Streamlit, NumPy*  
+[View on GitHub](https://github.com/AbhijeetKumar1505/Dexter)
 
-## **Design**
-- Responsive layout optimized for all screen sizes
-- Timeless design without heavy animations and motion
-- Endless customization options through [data attributes](https://once-ui.com/docs/theming)
+## **📫 Get in Touch**
 
-## **Content**
-- Render sections conditionally based on the content file
-- Enable or disable pages for blog, work, gallery and about / CV
-- Generate and display social links automatically
-- Set up password protection for URLs
+- 📧 Email: [ab7120977@gmail.com](mailto:ab7120977@gmail.com)
+- 💼 LinkedIn: [linkedin.com/in/abhijeet-kumar-7bb605311](https://www.linkedin.com/in/abhijeet-kumar-7bb605311/)
+- 🌐 GitHub: [github.com/AbhijeetKumar1505](https://github.com/AbhijeetKumar1505)
+- 📍 Location: Banka, Bihar, India
 
-## **Localization**
-- A localized version of Magic Portfolio is available with the next-intl library
-- To use localization, switch to the 'i18n' branch
+## **🔧 Technical Skills**
 
-# **Authors**
+- **Machine Learning**: Linear/Logistic Regression, Decision Trees, Neural Networks
+- **Deep Learning**: CNNs, RNNs, LSTMs, GANs
+- **Data Engineering**: Apache Airflow, Spark, Hadoop, Kafka
+- **Database**: MySQL, PostgreSQL, MongoDB
 
-Connect with us on Threads or LinkedIn.
+## **📊 Certifications**
 
-Lorant Toth: [Threads](https://www.threads.net/@lorant.one), [LinkedIn](https://www.linkedin.com/in/tothlorant/)  
-Zsofia Komaromi: [Threads](https://www.threads.net/@zsofia_kom), [LinkedIn](https://www.linkedin.com/in/zsofiakomaromi/)
+- Docker & Kubernetes Workshop – Scaler Academy
+- Multiple School Level Olympiad Achievements
 
-Localization added by [François Hernandez](https://github.com/francoishernandez)
+---
 
-# **Get involved**
-
-- Join the [Design Engineers Club on Discord](https://discord.com/invite/5EyAQ4eNdS) and share your portfolio with us!
-- Report a [bug](https://github.com/once-ui-system/magic-portfolio/issues/new?labels=bug&template=bug_report.md).
-
-# **License**
-
-Distributed under the CC BY-NC 4.0 License.
-- Commercial usage is not allowed.
-- Attribution is required.
-- You can extend the license to commercial use by purchasing a [Once UI Pro](https://once-ui.com/pricing) license.
-
-See `LICENSE.txt` for more information.
-
-# **Deploy with Vercel**
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=%2F%2Fraw.githubusercontent.com%2Fonce-ui-system%2Fmagic-portfolio%2Fmain%2Fpublic%2Fimages%2Fog%2Fhome.jpg)
+*Built with ❤️ using [Next.js](https://nextjs.org/) and [Once UI](https://once-ui.com)*
