@@ -202,7 +202,7 @@ export default async function About() {
                 variant="primary"
                 size="m"
                 prefixIcon="download"
-                width="100%"
+                style={{ width: '100%' }}
               >
                 Download Resume
               </Button>
