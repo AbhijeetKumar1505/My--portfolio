@@ -97,6 +97,28 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
+        company: "Youmat",
+        timeframe: "November 2025",
+        role: "Vice President – Product & Innovation",
+        achievements: [
+          <>Leading brainstorming and development of new features and product improvements.</>,
+          <>Collaborating with cross-functional teams to define the product roadmap and user-centric service offerings.</>,
+          <>Driving AI-integrated solutions that enhance user experience and support scalable service delivery.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Agewell",
+        timeframe: "October 2025",
+        role: "Full Stack App & Web Developer",
+        achievements: [
+          <>Designed and developed Agewell&apos;s app and website from scratch using Next.js, React Native, Java, and Supabase.</>,
+          <>Integrated backend and database functionalities to synchronize web and mobile platforms seamlessly.</>,
+          <>Partnered with design and strategy teams to align technical delivery with the brand vision.</>,
+        ],
+        images: [],
+      },
+      {
         company: "Deloitte Australia",
         timeframe: "August 2025",
         role: "Data Analytics Job Simulation Participant",
