@@ -1,45 +1,48 @@
 {
   "Name": "Abhijeet Kumar",
   "Email": "ab7120977@gmail.com",
-  "Phone": "+91 9939584630",
+  "Phone": "+91 99395 84630",
+  "Portfolio": "https://abhijeetkumar-portfolio.vercel.app/",
   "LinkedIn": "https://www.linkedin.com/in/abhijeet-kumar-7bb605311/",
   "GitHub": "https://github.com/AbhijeetKumar1505",
   "Other Links": "https://instagram.com/abhijeet_1505",
-  "Bio/Details": "Hi, I'm Abhijeet Kumar — a passionate Data Science undergraduate at IIT Madras, specializing in backend development, automation, and data-driven product strategy. With hands-on experience in Python, SQL, Django, and modern data tools, I build robust, scalable solutions that prioritize performance and user experience. As the Co-Founder & Marketing Strategist at NexusTycoon.com, I've driven business growth through data analytics, process automation, and targeted marketing strategies. I also serve as Secretary of Rampage Esports Club, where I manage operations, events, and partnerships. Beyond technical skills, I'm deeply committed to community-building and mentorship, having worked with dynamic teams and online communities to foster collaboration and personal development. My work is grounded in clear communication, leadership, and a continuous learning mindset.",
+  "Bio/Details": "Data Science undergraduate at IIT Madras with hands-on experience in AI/ML, full-stack app & web development, and product innovation. Adept at building scalable, user-centric solutions using Next.js, React Native, Django, and Supabase. Currently driving product strategy at Youmat and developing cross-platform solutions at Agewell. Passionate about integrating AI, design, and data to build impactful digital experiences.",
   "Skills": [
-    "Programming Languages: Python, Java, SQL, HTML, CSS, JavaScript",
-    "Frameworks: Django, React, Node.js, Express, Flask",
-    "Tools: Git, Docker, AWS, Linux, VS Code, PyCharm, IntelliJ IDEA",
-    "Database: MySQL, PostgreSQL, MongoDB",
-    "Cloud: AWS, GCP, Azure",
-    "Data Science: Pandas, NumPy, Scikit-learn, TensorFlow, Keras, PyTorch",
-    "Data Visualization: Matplotlib, Seaborn, Plotly, Tableau",
-    "Machine Learning: Linear Regression, Logistic Regression, Decision Trees, Random Forest, Gradient Boosting, K-Nearest Neighbors, Support Vector Machines, Neural Networks",
-    "Deep Learning: Convolutional Neural Networks, Recurrent Neural Networks, Long Short-Term Memory, Generative Adversarial Networks",
-    "Data Engineering: Apache Airflow, Apache Spark, Apache Hadoop, Apache Kafka"
+    "Programming Languages: Python, Java, SQL, C#, JavaScript",
+    "Web Development: HTML, CSS, JavaScript, Django, Streamlit, WordPress, Svelte",
+    "Frameworks: React Native, Next.js, Angular, Flask, Django",
+    "Data & Analysis: MySQL, PostgreSQL, SQLite3, MongoDB, Pandas, NumPy, Matplotlib, Data Cleaning, Data Visualization, Machine Learning, Data Analysis, Tableau",
+    "Tools & Technologies: Git, REST API, Spring Boot, Docker, Kafka, Zookeeper, Automation",
+    "Core Competencies: Project Management, Community Management, Team Leadership, Communication, Programming",
+    "Development Practices: Software Testing, Debugging"
   ],
   "Education": [
-    "BS in Data Science and Applications, IIT Madras, 2024-2028",
-    "High School, Guru Gobind Singh Public School, Bokaro Steel City-Jharkhand, 2022-2024",
-    "Secondary School, Saint Joseph's School, Banka-Bihar, 2021-2022"
+    "IIT Madras — Bachelor of Science, Data Science and Applications — CGPA: 6.69, 5th semester, 2024 – 2028, Chennai, Tamil Nadu",
+    "Guru Gobind Singh Public School — Intermediate — 69.8%, August 2022 – May 2024, Bokaro, Jharkhand",
+    "St Joseph's School — Matriculation — 91.65%, March 2021 – June 2022, Banka, Bihar"
   ],
   "Achievements & Certifications": [
-    "Docker & Kubernetes Workshop – Scaler Academy",
-    "Olympiads: 2016: School Topper",
-    "Olympiads: 2017: 3rd Rank (School Level)",
-    "Olympiads: 2018: School Topper"
+    "Docker & Kubernetes Workshop — Scaler Academy",
+    "Olympiad — 2016: School Topper",
+    "Olympiad — 2017: 3rd Rank (School Level)",
+    "Olympiad — 2018: School Topper",
+    "Position of Responsibility: Secretary, Rampage Esports Club"
   ],
   "Experience": [
-    "Deloitte Australia (August 2025): Data Analytics Job Simulation - Completed a Deloitte job simulation involving data analysis and forensic technology. Created a data dashboard using Tableau and used Excel to classify data and draw business conclusions.",
-    "Rampage Esports Club (October 2024 – May 2025): Secretary - Directed club operations, organized tournaments, and handled sponsor relations. Improved participation rates and streamlined communications.",
-    "Nexus Tycoon (May 2024 – October 2024): Co-Founder & Marketing Strategist - Led growth through data analytics and automation. Developed marketing strategies and boosted user engagement. Managed branding, content, and operational pipelines.",
-    "Ments (2024 - Present): Community Manager, Business Analyst, Developer - Managed an active online learning community. Mentored members on growth and upskilling. Developed a FullStack website to improve user experience."
+    "Youmat (November 2025 – Present): CTO — Leading brainstorming and development of new features and product improvements. Collaborating with cross-functional teams to define the product roadmap and user-centric service offerings. Working on innovative AI-integrated solutions to enhance user experience and service scalability.",
+    "Agewell (October 2025): Full Stack App & Web Developer Intern — Designed and developed the Agewell app and website from scratch using Next.js, React Native, Java, and Supabase. Integrated backend and database functionalities, ensuring seamless synchronization between app and web platforms. Collaborated closely with design and strategy teams to align technical delivery with brand goals.",
+    "Deloitte Australia — Data Analytics Job Simulation on Forage (August 2025): Completed a Deloitte job simulation involving data analysis and forensic technology. Created a data dashboard using Tableau. Used Excel to classify data and draw business conclusions.",
+    "Ments (2024 – Present): Business Associate Manager, Fullstack Developer — Led business development initiatives, strategic partnerships, and community growth. Managed and nurtured a community of learners, founders, and professionals. Designed, developed, and maintained the Ments web platform. Collaborated with cross-functional teams to translate business requirements into product features. Ensured high-quality implementation through testing, debugging, and iterative development."
   ],
   "Projects": [
-    "Data Analysis Tool (Jan 2025): Python-based statistical analysis and visualization tool. Tech Stack: Python, Pandas, Matplotlib, Streamlit, NumPy. Project Link: https://github.com/AbhijeetKumar1505/Dexter",
-    "Data Cleaning Tool (Mar 2025): UI-based tool for data standardization and preprocessing. Tech Stack: Python, Streamlit, NumPy, CSV Handling. Project Link: https://github.com/AbhijeetKumar1505/DCT",
-    "Stock Price Predictor (Mar 2025): Predicting stock prices using machine learning. Tech Stack: Python, Streamlit, NumPy, CSV, Machine Learning. Project Link: https://github.com/AbhijeetKumar1505/Stock-Sentiment-Price-Predictor",
-    "EcoFinds – Empowering Sustainable Consumption through a Second-Hand Marketplace (Mar 2025): A second-hand marketplace for sustainable consumption. Tech Stack: Python, Django, HTML, CSS, Jinja2, Bootstrap, SQLite. Project Link: https://github.com/AbhijeetKumar1505/EcoFinds"
+    "Smart Parking Management System: Flask + SQLite parking platform with real-time reservations, admin Chart.js analytics, and lot/spot CRUD. Stack: Python, Flask, SQLAlchemy, Bootstrap 5, Chart.js. https://github.com/24f2007359/parking-system",
+    "Placement Portal Application V2 (PPA-V2): MAD-II campus recruitment portal — Flask API, Vue.js SPA, JWT RBAC, Celery jobs, Redis caching (12.5× faster job listings). All 8 milestones complete. https://github.com/24f2007359/Placement-portal-v2",
+    "Heavy Equipment Price Prediction: Kaggle challenge — feature engineering, OOF target encoding, Ridge-stacked RF/XGBoost/LightGBM/CatBoost ensemble, OOF RMSLE 0.1997. https://github.com/AbhijeetKumar1505/MLP_Project",
+    "Business Data Management Capstone: Survey analysis of ~1,600 Ments users on engagement, retention, churn, and SEO discoverability with data-backed growth recommendations. https://github.com/AbhijeetKumar1505/BDM-Capstone"
   ],
-  "Address": "Ashramnagar, Banka, Bihar - 813102"
+  "Address": "Near DFO Residence, Ashramnagar, Banka, Bihar – 813102",
+  "Research": [
+    "Security and Architecture of AI Coding Agents and the Model Context Protocol (MCP) — In progress. Bubblewrap sandboxing, MCP (Stdio/SSE), OAuth 2.1, agentic misalignment. Notebook: https://notebook.google.com/notebook/2274aec5-936c-45a6-aa45-9a09362f87a9 · Essay: /blog/ai-agent-sandbox-security",
+    "Jericho: Architecting AI-Native Engineering Environments — In progress. FreeCAD/OCCT intelligence layer, FMforME D1–D6 runtime monitor, 548/548 Fusion builds. Notebook: https://notebook.google.com/notebook/5c406037-9b2a-44b5-8495-4e89df49d8ff · Essay: /blog/jericho-cursor-for-cad"
+  ]
 }

@@ -1,0 +1,67 @@
+---
+title: "Placement Portal Application V2 (PPA-V2)"
+publishedAt: "2026-07-01"
+summary: "Role-based campus recruitment portal for MAD-II at IIT Madras — Flask API, Vue.js SPA, Redis caching (12.5× faster job listings), and Celery background jobs for exports, reminders, and reports."
+images: []
+tag: ["Flask", "Vue.js", "Redis", "Celery", "JWT", "SQLite", "Bootstrap"]
+team:
+  - name: "Abhijeet Kumar"
+    role: "Developer"
+    avatar: "/AB_Photo/AB_Photo.jpg"
+    linkedIn: "https://www.linkedin.com/in/abhijeet-kumar-7bb605311/"
+link: "https://github.com/24f2007359/Placement-portal-v2"
+---
+
+## Overview
+
+A campus recruitment management web application developed for **Modern Application Development II (MAD-II)** at IIT Madras BS.
+
+Institutes use this portal to coordinate placement drives between companies and students — replacing spreadsheets and manual email workflows with a single **role-based** system.
+
+All **8 core milestones** are complete (auth through Redis caching).
+
+## Tech stack
+
+| Layer | Technology |
+|-------|------------|
+| Backend API | Flask + SQLAlchemy |
+| Frontend | Vue.js (Vite) + Bootstrap |
+| Database | SQLite |
+| Auth | JWT + RBAC |
+| Caching | Redis (optional graceful fallback) |
+| Background jobs | Celery + Redis + Celery Beat |
+| Email | Gmail SMTP (console fallback if unset) |
+
+## User roles
+
+- **Admin (Institute)** — Pre-seeded superuser; approves companies and drives, manages users, views reports
+- **Company** — Registers, creates placement drives after approval, manages applications and interviews
+- **Student** — Self-registers, browses approved drives, applies, tracks status, downloads offer letters
+
+## Core capabilities
+
+### Authentication & dashboards
+JWT login/register for all roles with protected role-specific dashboards (`/admin`, `/company`, `/student`).
+
+### Admin management
+Search/approve/reject/blacklist companies and students; approve or close placement drives; view all applications and placements.
+
+### Company & student flows
+Companies create job postings (start as pending). Students browse approved/active drives, upload resumes, apply with eligibility and duplicate checks, and track applications end to end.
+
+### Application history (Milestone 6)
+Full audit trail: **Applied → Shortlisted → Interview → Offer → Placed / Rejected**. Offer/Placed statuses create placement records (position, salary, joining date).
+
+### Background jobs (Milestone 7)
+- Daily interview reminders (students with interviews within 24h)
+- Monthly per-company HTML + PDF placement reports emailed to HR
+- On-demand async CSV exports for applications and placements
+
+### Redis caching (Milestone 8)
+Frequently read endpoints cached with namespace versioning and write-path invalidation. Measured on a 60-job listing: **18.31 ms → 1.47 ms (~12.5× speedup)**. Redis is optional — if down, reads fall back to the database.
+
+## Data models
+
+`User`, `Company`, `Student`, `JobPosition`, `Application`, `Placement`, `ApplicationStatusHistory`
+
+See the full project on [GitHub](https://github.com/24f2007359/Placement-portal-v2).

@@ -1,0 +1,78 @@
+---
+title: "Building the \"Cursor\" for CAD: 5 Surprising Lessons from the Frontlines of AI Engineering"
+publishedAt: "2026-09-20"
+summary: "Jericho builds an intelligence layer on FreeCAD/OCCT. Five lessons from FMforME: physics anarchists, the D1–D6 safety gate, standard-referenced feedback, the Pro-model paradox, and gestural MCP interfaces."
+image: "/blog_image/AI-Native_CAD_Architecture_Overview.png"
+team:
+  - name: "Abhijeet Kumar"
+    role: "Data Science Undergraduate | AI/ML & Full-Stack Developer"
+    avatar: "/AB_Photo/AB_Photo.jpg"
+    linkedIn: "https://www.linkedin.com/in/abhijeet-kumar-7bb605311/"
+---
+
+The engineering world currently faces a stark **capability asymmetry**. While Large Language Models (LLMs) have become remarkably proficient at writing Python solver files or generating simulation scripts, they frequently fail when tasked with generating the underlying geometry. This is the central challenge addressed by **Jericho**, an AI-native CAD environment designed not to reinvent the geometric kernel, but to orchestrate it.
+
+The core philosophy of Jericho is built on a specific analogy: **Cursor is to VS Code as Jericho is to the CAD foundation.**
+
+Just as Cursor transformed the developer experience by building an intelligence layer (agent, context, and orchestration) around an existing editor, Jericho builds an intelligence layer around established CAD kernels like Open CASCADE (OCCT) and FreeCAD. We do not need a new B-Rep (Boundary Representation) solver; we need a deterministic agentic layer that bridges the gap between abstract human intent and the rigid requirements of physical manufacturing. Through research with the **FMforME** (Fusion Modeling for Mechanical Engineering) framework, we have distilled five critical lessons for the future of AI-driven engineering.
+
+## 1. LLMs are Physics Anarchists (and How to Stop Them)
+
+The primary bottleneck in "Text-to-CAD" is not linguistic—it is a fundamental failure in spatial reasoning. LLMs lack a consistent internal 3D state, leading them to act as physics anarchists that generate specifications which are mathematically and thermodynamically impossible.
+
+In recent benchmarks, LLMs frequently assigned materials a Poisson’s ratio (ν) of 0.6. For a stable isotropic material, any ν > 0.5 implies a material that would paradoxically decrease in volume when stretched—a direct violation of the second law of thermodynamics. Models also often provide negative dimensions for structural components, violating the positive-definiteness required for numerical stability in Finite Element Method (FEM) analysis. As the FMforME research notes:
+
+> Solver input files achieved 78–88% success rates… while geometry generation fell to approximately 70% for simple shapes and only 56% for assemblies.
+
+To stop this physics anarchy, we must treat LLM output as a raw, unverified candidate. The solution is not better prompting, but a deterministic **Safety Gate** that validates geometry before it ever touches a CAD kernel or a mesh generator.
+
+## 2. The Safety Gate Is More Important Than the Model
+
+The FMforME framework shifts focus from the generative model to a **three-layer runtime constraint verification** system. Layer 1 generates a structured `ModelSpec` JSON from natural language. Layer 2 (Runtime Monitor) evaluates it against six defect predicates. Layer 3 executes only validated specs in a CAD environment (e.g. Fusion 360). If a specification fails any ERROR-level check, the pipeline is blocked.
+
+| ID | Defect | Why it matters |
+|----|--------|----------------|
+| D1 | Unconstrained DOF | Missing BCs → singular stiffness matrix; rigid-body modes (ASME V&V 10-2019) |
+| D2 | Negative stiffness | Zero/negative dimensions break positive-definiteness (Bathe FEM) |
+| D3 | Stress singularity | Sharp re-entrant corners → theoretically infinite stress (LEFM) |
+| D4 | Load–BC conflict | Loads on fixed nodes do no structural work (ASME V&V 10-2019) |
+| D5 | Material violation | e.g. Poisson’s ratio must satisfy ν ∈ (0, 0.5); σ_y < σ_uts |
+| D6 | Mesh topology | Inverted elements / non-positive Jacobian (Verdict) |
+
+## 3. Feedback Must Be Standard-Referenced to Work
+
+When an AI agent fails a check, generic critiques like "this is physically incorrect" produce hallucination loops. For self-correction, feedback must be **standard-referenced** and tied to specific JSON field paths.
+
+FMforME’s Self-Examine subsystem succeeds by grounding critiques in standards such as ASME V&V 10-2019—defect ID, violating field path (e.g. `material.poisson_ratio`), actual value, and the engineering *why*. That moves the loop from trial-and-error toward guaranteed buildability. Self-correction works especially well for scalar violations; multi-field coordination (e.g. D1 BC sufficiency) remains harder.
+
+## 4. The Pro Model Paradox
+
+One of the most counter-intuitive findings: **Pro-tier models are often inferior for high-reliability engineering agent loops.** In FMforME experiments, DeepSeek-V4-Flash and Qwen 3.6 Flash demonstrated superior reliability compared to V4-Pro.
+
+The Pro model suffered a **9.9%** system-level parse failure rate—empty responses or malformed JSON. Larger models often over-reason or add conversational text that breaks rigid schemas required for CAD tool-calling. Flash models follow instructions more narrowly and adhere better to schema. For high-reliability agent loops, low-latency models are often the better choice.
+
+Runtime verification itself is cheap: about **~0.1 ms per check**, negligible next to LLM inference.
+
+## 5. The Interface of the Future is Gestural and Semantic
+
+Jericho’s interaction path moves beyond the text box. Professional CAD needs a multimodal path where AI is a semantic controller for the kernel, potentially via the Model Context Protocol (MCP):
+
+**Camera → Hand Tracking → Landmarks → Gesture Intent → MCP Tool Call → CAD Command**
+
+Capturing hand landmarks (e.g. MediaPipe) and recognizing intent—such as a pinch to modify a dimension—maps motion to structured tool calls like `{ "operation": "modify_dimension", "target": "bracket_01", "value": "5mm" }`. The LLM becomes a semantic adapter: typed, reversible, deterministic commands rather than raw FreeCAD Python.
+
+Jericho also maps the Cursor/VS Code stack onto engineering: FreeCAD as foundation, CAD documents as source, dependency models as AST, recompute as build, simulation as tests, parametric edits as refactoring.
+
+## Conclusion: The 100% Build Rate Future
+
+When LLM generation is filtered through a rigorous runtime monitor, AI-generated engineering reliability transforms. In a test of **548** specifications that passed the monitor’s predicates, **548 of 548** successfully built in Fusion 360.
+
+We can mathematically guarantee that an AI-generated model is physically valid and buildable. As geometric validity stops being the barrier, the remaining challenge is no longer "Can the AI build this?" but:
+
+**How precisely can we capture and verify human engineering intent at the moment of creation?**
+
+Open research spikes for Jericho include plugin vs. fork vs. adapter architecture, the topological naming problem, MCP for high-frequency 3D viewport sync, scaling D1–D6 to multi-part assemblies, and mapping gestures to complex CAD operations.
+
+---
+
+*Related research notebook:* [Jericho: Architecting AI-Native Engineering Environments](https://notebook.google.com/notebook/5c406037-9b2a-44b5-8495-4e89df49d8ff) · also on [/research](/research)

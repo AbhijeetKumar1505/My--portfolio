@@ -1,0 +1,61 @@
+---
+title: "Heavy Equipment Price Prediction"
+publishedAt: "2026-09-20"
+summary: "Kaggle heavy-equipment price prediction with feature engineering, target encoding, and a Ridge-stacked ensemble of RF, XGBoost, LightGBM, and CatBoost — OOF RMSLE 0.1997."
+images: []
+tag: ["Python", "XGBoost", "LightGBM", "CatBoost", "scikit-learn", "Kaggle"]
+team:
+  - name: "Abhijeet Kumar"
+    role: "Developer"
+    avatar: "/AB_Photo/AB_Photo.jpg"
+    linkedIn: "https://www.linkedin.com/in/abhijeet-kumar-7bb605311/"
+link: "https://github.com/AbhijeetKumar1505/MLP_Project"
+---
+
+## Overview
+
+A machine learning project for the Kaggle **Heavy Equipment Selling Price Prediction Challenge**. It predicts the transaction value of heavy machinery from equipment specifications, age, operating hours, category information, and other structured attributes.
+
+## Dataset
+
+| File | Shape | Purpose |
+|------|------:|---------|
+| `train.csv` | 138,701 × 50 | Training records with `TargetValue` |
+| `test.csv` | 15,000 × 49 | Unlabelled prediction set |
+| `sample_submission.csv` | 15,000 × 2 | Submission template |
+| `metadata.csv` | 49 × 2 | Variable descriptions |
+
+`TransactionID` and near-unique `AssetID` are excluded from modelling; `ProductConfigID` is kept as a repeating categorical feature.
+
+## Modelling workflow
+
+1. Load and inspect train, test, and submission files
+2. Univariate, bivariate, and multivariate EDA
+3. Clean and engineer features — fix invalid `ManufactureYear` values, parse `TransactionDate`, derive `AssetAge`, log operating hours, usage flags, hours/year, missing-value counts; drop columns with >98% missing
+4. Add frequency and group-level aggregate features
+5. Smoothed five-fold out-of-fold **target encoding** for high-cardinality categoricals
+6. Train four regressors: **Random Forest**, **XGBoost**, **LightGBM**, **CatBoost**
+7. Tune models, generate OOF predictions, and compare mean / weighted / **Ridge-stacked** ensembles
+8. Invert `log1p` predictions and write `submission.csv`
+
+Target is trained as `log1p(TargetValue)`; metric is **RMSLE** (RMSE in log space).
+
+## Results (5-fold OOF RMSLE)
+
+| Candidate | RMSLE |
+|-----------|------:|
+| Tuned Random Forest | 0.2185 |
+| Tuned CatBoost | 0.2074 |
+| Tuned LightGBM | 0.2026 |
+| Tuned XGBoost | 0.2021 |
+| Mean ensemble | 0.2009 |
+| Weighted ensemble | 0.1997 |
+| **Ridge-stacked ensemble** | **0.1997** |
+
+The fine-tuned stacked ensemble is the selected final model.
+
+## Stack
+
+Python, NumPy, Pandas, Matplotlib, SciPy, scikit-learn, XGBoost, LightGBM, CatBoost, Jupyter
+
+See the full project on [GitHub](https://github.com/AbhijeetKumar1505/MLP_Project).

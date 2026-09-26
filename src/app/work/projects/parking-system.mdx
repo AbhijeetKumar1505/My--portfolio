@@ -1,9 +1,9 @@
 ---
-title: "Parking System"
-publishedAt: "2025-01-01"
-summary: "A parking management system built using Python, Flask, and PostgreSQL, SQLAlchemy."
+title: "Smart Parking Management System"
+publishedAt: "2025-05-28"
+summary: "Flask + SQLite parking platform with real-time reservations, admin analytics (Chart.js), and full lot/spot CRUD for users and administrators."
 images: []
-tag: ["Python", "Flask", "PostgreSQL", "HTML", "CSS", "JavaScript"]
+tag: ["Python", "Flask", "SQLAlchemy", "SQLite", "Bootstrap", "Chart.js"]
 team:
   - name: "Abhijeet Kumar"
     role: "Developer"
@@ -12,34 +12,43 @@ team:
 link: "https://github.com/24f2007359/parking-system"
 ---
 
-Smart Parking Management System
-Overview:
-A robust web-based system built using Python and Flask for managing urban and corporate parking lots. It provides both user-side booking and admin-side analytics functionalities.
+## Overview
 
-Key Features (User Side):
+A modern web-based parking management system that manages parking lots, handles reservations, and provides real-time analytics for administrators.
 
-1. Real-time parking spot availability
+Built with **Flask**, **SQLAlchemy**, and **SQLite**, with a Bootstrap 5 frontend and Chart.js dashboards.
 
-2. Instant reservations and booking history
+## Features
 
-3. Vehicle profile management
+### For users
+- View available parking spots in real time
+- Make instant reservations and review parking history
+- Manage vehicle information
+- Get parking duration estimates
+- Browse lot locations, pricing, and spot availability
 
-4. Parking time estimation
+### For administrators
+- Real-time occupancy monitoring and revenue tracking
+- Peak-hours analysis and parking-duration distribution
+- Active user and reservation monitoring
+- Full parking-lot management: add/edit/delete lots, set hourly pricing, manage spots
+- Occupancy-rate and revenue-by-lot analytics over time
 
-Key Features (Admin Side):
+## Tech stack
 
-1. Occupancy tracking and real-time dashboards
+| Layer | Technology |
+|-------|------------|
+| Backend | Python 3.x, Flask, SQLAlchemy |
+| Database | SQLite |
+| Frontend | HTML5/CSS3, JavaScript, Bootstrap 5 |
+| Analytics UI | Chart.js, DataTables, Font Awesome |
 
-2. Revenue analytics and lot performance metrics
+## Database schema
 
-3. Parking spot and lot management (CRUD)
+Key tables: **users**, **parking_lots**, **parking_spots**, **reservations**, **vehicles**.
 
-4. User activity monitoring
+## Architecture
 
-Tech Stack:
-Python, Flask, SQLAlchemy, PostgreSQL, HTML/CSS, Bootstrap
+Controllers handle routes and business logic; models define the schema; Flask-Migrate manages migrations; Jinja templates power separate admin and user UIs under `templates/admin` and `templates/user`.
 
-Impact:
-Optimizes space utilization, reduces manual intervention, and enhances the user parking experience while giving administrators full control over operations and analytics.
-
-See the project on [GitHub](https://github.com/24f2007359/parking-system).
+See the full project on [GitHub](https://github.com/24f2007359/parking-system).

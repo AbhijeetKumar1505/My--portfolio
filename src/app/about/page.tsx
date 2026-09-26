@@ -35,16 +35,6 @@ export async function generateMetadata() {
 }
 
 export default async function About() {
-  const filePath = path.join(process.cwd(), 'public', 'AB_Photo', 'details.json');
-  const detailsRaw = await fs.readFile(filePath, 'utf-8');
-  const details = JSON.parse(detailsRaw);
-
-  const skills = details["Skills"] || [];
-  const education = details["Education"] || [];
-  const achievements = details["Achievements & Certifications"] || [];
-  const experience = details["Experience"] || [];
-  const projects = details["Projects"] || [];
-
   const structure = [
     {
       title: about.intro.title,
@@ -65,6 +55,11 @@ export default async function About() {
       title: about.technical.title,
       display: about.technical.display,
       items: about.technical.skills.map((skill) => skill.title),
+    },
+    {
+      title: about.achievements.title,
+      display: about.achievements.display,
+      items: about.achievements.items.map((item) => item.title),
     },
   ];
   return (
@@ -111,6 +106,14 @@ export default async function About() {
               <Icon onBackground="accent-weak" name="globe" />
               {person.location}
             </Flex>
+            {person.phone && (
+              <Flex gap="8" vertical="center">
+                <Icon onBackground="accent-weak" name="phone" />
+                <a href={`tel:${person.phone.replace(/\s/g, "")}`} style={{ color: "inherit", textDecoration: "none" }}>
+                  {person.phone}
+                </a>
+              </Flex>
+            )}
             {person.languages.length > 0 && (
               <Flex wrap gap="8">
                 {person.languages.map((language, index) => (
@@ -307,7 +310,7 @@ export default async function About() {
               >
                 {about.technical.title}
               </Heading>
-              <Column fillWidth gap="l">
+              <Column fillWidth gap="l" marginBottom="40">
                 {about.technical.skills.map((skill, index) => (
                   <Column key={`${skill}-${index}`} fillWidth gap="4">
                     <Text id={skill.title} variant="heading-strong-l">{skill.title}</Text>
@@ -340,6 +343,31 @@ export default async function About() {
                         ))}
                       </Flex>
                     )}
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {about.achievements.display && (
+            <>
+              <Heading
+                as="h2"
+                id={about.achievements.title}
+                variant="display-strong-s"
+                marginBottom="m"
+              >
+                {about.achievements.title}
+              </Heading>
+              <Column fillWidth gap="l">
+                {about.achievements.items.map((item, index) => (
+                  <Column key={`${item.title}-${index}`} fillWidth gap="4">
+                    <Text id={item.title} variant="heading-strong-l">
+                      {item.title}
+                    </Text>
+                    <Text variant="heading-default-xs" onBackground="neutral-weak">
+                      {item.description}
+                    </Text>
                   </Column>
                 ))}
               </Column>
